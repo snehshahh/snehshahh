@@ -1,0 +1,82 @@
+.reviews {
+    background-color: #9b7956;
+    display: flex;
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .review-container-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+  
+  .review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 0 20px;
+  }
+  
+  .image-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .recommendation {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .name-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .linkedin-icon {
+    color: black;
+  }
+  
+  .linkedin-icon a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .linkedin-icon a:hover {
+    color: #0077b5;
+  }
+  
+  .position {
+    font-size: 12px;
+    color: black;
+  }

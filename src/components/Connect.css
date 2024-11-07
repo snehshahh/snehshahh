@@ -1,0 +1,18 @@
+.connectwithme{
+    background-color: #272625;
+}
+
+.connecttitle{
+font-size: 5rem;
+}
+
+.mails{
+    color: #9B7956;
+}
+
+.white-underline {
+    text-decoration: underline;
+    color: white;
+    text-decoration-color: white; /* Sets the underline color to white */
+  }
+  

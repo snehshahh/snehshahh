@@ -1,0 +1,44 @@
+.experience-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.pagetitle {
+  font-size: 5rem; /* Smaller font size for title */
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.experience-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: auto; /* Pushes the row to the bottom */
+}
+
+.experience-col h4 {  
+  font-size: 1.5rem; /* Reduced font size for sub-heading */
+}
+
+.experience-col h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.experience-col h5 {
+  font-size: 1.0rem;
+  color: #555;
+}
+
+.experience-col p {
+  font-size: 1.2rem;
+}
+
+.date-col h4 {
+  font-size: 2rem; /* Smaller font size for dates */
+  font-weight: bold;
+  color: #333;
+}
