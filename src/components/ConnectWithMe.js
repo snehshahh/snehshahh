@@ -1,7 +1,8 @@
-// ConnectWithMe.js
 import React from 'react';
-import './Connect.css'
-
+import './Connect.css';
+import Github from '../assets/github.svg';
+import Twitter from '../assets/twitter.svg';
+import Linkedin from '../assets/linkedin.svg';
 
 const ConnectWithMe = () => {
   return (
@@ -21,15 +22,18 @@ const ConnectWithMe = () => {
       </span>
 
       <div className="d-flex flex-column align-items-center gap-3">
-        <span href="resume-link-here">
-          Let's Get Social
-        </span>
-        <a href="https://github.com/snehshahh" className="text-secondary text-decoration-none">
-        </a>
-        <a href="https://www.linkedin.com/snehshahh" className="text-secondary text-decoration-none">
-        </a>
-        <a href="https://twitter.com/snehshahh" className="text-secondary text-decoration-none">
-        </a>
+        <span>Let's Get Social</span>
+        <div className="social-links d-flex gap-3">
+          <a href="https://github.com/snehshahh" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <img src={Github} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/snehshahh" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <img src={Linkedin} alt="LinkedIn" />
+          </a>
+          <a href="https://twitter.com/snehshahh" className="social-icon" target="_blank" rel="noopener noreferrer">
+            <img src={Twitter} alt="Twitter" />
+          </a>
+        </div>
       </div>
     </div>
   );

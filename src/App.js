@@ -10,6 +10,7 @@ import Skills from './components/Skills.js'
 import Experience from './components/Experince.js'
 import Reviews from './components/Reviews.js';
 import ConnectWithMe from './components/ConnectWithMe.js';
+import Education from './components/Education.js';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,9 @@ function App() {
         </section>
         <section id="Experience" className="section">
           <Experience />
+        </section>
+        <section id="Education" className="section">
+          <Education />
         </section>
         <section id="Reviews" className="section">
           <Reviews />

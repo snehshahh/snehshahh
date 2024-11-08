@@ -1,20 +1,13 @@
 import React from 'react';
 import Sneh from '../images/Sneh.jpg';
+import './Profile.css'
 
 const ProfileCard = () => {
   return (
     <div className="profile-container">
       <div className="profile-card">
         {/* Profile Image Container */}
-        <div className="image-container">
-          <div className="image-wrapper">
-            <img 
-              src={Sneh}
-              alt="Profile"
-              className="profile-image"
-            />
-          </div>
-        </div>
+  
 
         {/* Text Content */}
         <div className="content">

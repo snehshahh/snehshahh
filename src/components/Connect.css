@@ -1,18 +1,118 @@
-.connectwithme{
+.connectwithme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
     background-color: #272625;
-}
 
-.connecttitle{
-font-size: 5rem;
-}
-
-.mails{
-    color: #9B7956;
-}
-
-.white-underline {
+    padding: 20px;
+  }
+  
+  .connecttitle {
+    font-size: 2.5rem; /* Default large font size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .mails {
+    color: #8B4513;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .white-underline {
     text-decoration: underline;
     color: white;
-    text-decoration-color: white; /* Sets the underline color to white */
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px; /* Adjust spacing as needed */
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    background-color: #8B4513; /* Brown color */
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .connecttitle {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+  
+    .mails {
+      font-size: 1rem; /* Smaller font size for mails */
+    }
+  
+    .social-links {
+      gap: 15px; /* Reduced gap between social icons */
+    }
+  
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+    }
+  
+    .social-icon img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .connecttitle {
+      font-size: 1.5rem; /* Further reduce font size for very small screens */
+    }
+  
+    h1 {
+      font-size: 1.2rem; /* Smaller font size for very small screens */
+    }
+  
+    .mails {
+      font-size: 0.9rem; /* Smaller font size for very small screens */
+    }
+  
+    .social-links {
+      gap: 10px; /* Even smaller gap between social icons */
+    }
+  
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      padding: 8px;
+    }
+  
+    .social-icon img {
+      width: 20px;
+      height: 20px;
+    }
   }
   

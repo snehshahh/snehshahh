@@ -1,0 +1,150 @@
+/* Profile */
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    animation: contentFadeIn 1s ease-in forwards;
+    flex-direction: row; /* Horizontal layout by default */
+    align-items: center;
+    gap: 2rem; /* Space between image and content */
+    text-align: left; /* Align text to left */
+    width: 100%; /* Ensure it takes up some width */
+    height: 500px; /* Set a fixed height for the card */
+    background-image: url('../images/Sneh.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+}
+
+/* Stack image and content vertically on smaller screens */
+@media (max-width: 900px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center; /* Center text for smaller screens */
+        height: auto; /* Let the height adjust automatically */
+        padding: 0; /* Remove padding to avoid extra space */
+        background-image: none; /* Remove background image to prevent overlapping */
+    }
+
+    .image-container {
+        width: 100%; /* Full width for the image */
+        height: 250px; /* Adjust image height */
+        background-image: url('../images/Sneh.jpg'); /* Set background image for the image container */
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 1rem;
+    }
+    
+    .content {
+        margin: 0; /* Reset margin for content */
+        max-width: 100%; /* Allow content to take full width */
+        color: black; /* Change text color for better contrast */
+    }
+
+    /* Adjust social icons to be smaller on smaller screens */
+    .social-icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .social-icon svg {
+        width: 1.2rem; /* Smaller icon size */
+        height: 1.2rem; /* Smaller icon size */
+    }
+
+    .name {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .title {
+        font-size: 1rem; /* Adjust title font size */
+    }
+}
+
+
+.image-container {
+    width: 200px; /* Fixed size for the image */
+    height: 200px; /* Fixed size for the image */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: imageZoomIn 1s ease-in forwards;
+}
+
+.content {
+    margin: 120px 0px 0px 150px;
+    max-width: 300px;
+    position: absolute;
+    left: 1rem; /* Align content to the left */
+    color: white; /* Ensure text is visible against background */
+}
+
+.name {
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.1;
+}
+
+.title {
+    font-family: 'Open Sauce', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.75;
+}
+
+.social-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Animations */
+
+/* Fade in content from top */
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide from top */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Zoom in image with fade */
+@keyframes imageZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Start zoomed out */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Zoom to normal size */
+    }
+}
