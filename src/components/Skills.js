@@ -52,7 +52,6 @@ const Skills = () => {
                   </div>
                   Express
                 </div>
-                {/* Add additional technologies here */}
               </div>
 
               <div className="tech-column">
@@ -68,10 +67,11 @@ const Skills = () => {
                   </div>
                   Node.js
                 </div>
-                {/* Add additional technologies here */}
               </div>
             </div>
           </div>
+
+          {/* Databases Section */}
           <div className="col-md-12">
             <h4 className="section-title">Databases</h4>
             <div className="tech-list">
@@ -80,18 +80,27 @@ const Skills = () => {
                   <div className="tech-icon-circle">
                     <img src={SqlLogo} className="technology-logo" alt="SQL Logo" />
                   </div>
-                  SQL Databases<span className="line"></span>
+                  <div>
+                    SQL Databases
+                    <br />
+                    <span className="tagline">MS SQL Server 2014 & PostgreSQL</span>
+                  </div>
                 </div>
                 <div className="tech-item">
                   <div className="tech-icon-circle">
                     <img src={DocumentLogo} className="technology-logo" alt="NoSQL Logo" />
                   </div>
-                  NoSQL<span className="line"></span>
+                  <div>
+                    NoSQL
+                    <br />
+                    <span className="tagline">Firebase & MongoDB</span>
+                  </div>
                 </div>
-                {/* Add additional technologies here */}
               </div>
             </div>
           </div>
+
+          {/* Details Section */}
           <div className="col-md-12">
             <h4 className="section-title">Details</h4>
             <div className="tech-list">
@@ -100,15 +109,22 @@ const Skills = () => {
                   <div className="tech-icon-circle">
                     <img src={CodeLogo} className="technology-logo" alt="Languages Logo" />
                   </div>
-                  Languages<span className="line"></span>
+                  <div>
+                    Languages
+                    <br />
+                    <span className="tagline">JavaScript, TypeScript, C#, Python</span>
+                  </div>
                 </div>
                 <div className="tech-item">
                   <div className="tech-icon-circle">
                     <img src={ToolsLogo} className="technology-logo" alt="Tools Logo" />
                   </div>
-                  Tools<span className="line"></span>
+                  <div>
+                    Tools
+                    <br />
+                    <span className="tagline">Git, Docker, Visual Studio Code</span>
+                  </div>
                 </div>
-                {/* Add additional technologies here */}
               </div>
             </div>
           </div>

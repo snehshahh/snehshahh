@@ -16,23 +16,24 @@
     color: #f5e4d5;
     opacity: 0;
     transform: translateY(-20px);
-    animation: fadeInUp 1s ease forwards;
+    animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 .about-title {
     font-size: 3rem;
     font-weight: lighter;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans';
     color: #ffffff;
     opacity: 0;
     transform: translateY(-20px);
-    animation: fadeInUp 1.2s ease forwards;
+    animation: fadeInUp 1s forwards 0.4s; /* Delay the animation */
 }
 
 .pronouns {
     font-size: 1.5rem;
     font-weight: lighter;
     color: #f5e4d5;
+    animation: fadeInUp 1s forwards 0.4s; /* Delay the animation */
 }
 
 .about-subtitle {
@@ -42,7 +43,7 @@
     font-weight: lighter;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1.5s ease forwards;
+    animation: fadeInUp 1s forwards 0.4s; /* Delay the animation */
 }
 
 .about-description {
@@ -52,7 +53,7 @@
     line-height: 1.6;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1.8s ease forwards;
+    animation: fadeInUp 1s forwards 0.8s; /* Delay the animation */
 }
 
 /* Animations */

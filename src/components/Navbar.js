@@ -1,4 +1,3 @@
-// components/Navbar.js
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -7,10 +6,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update navbar background
+      // Update navbar background on scroll
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
+      // Detect active section based on scroll position
       const sections = document.querySelectorAll('.section');
       let currentSection = 'home';
       sections.forEach(section => {
@@ -20,6 +19,15 @@ const Navbar = () => {
         }
       });
       setActiveSection(currentSection);
+
+      // Add animation class to the active section
+      sections.forEach(section => {
+        if (section.id === currentSection) {
+          section.classList.add('active-section');
+        } else {
+          section.classList.remove('active-section');
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -32,10 +40,14 @@ const Navbar = () => {
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
+    // Scroll to the selected section
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
+
+    // Add animation class immediately to trigger animation
+    element.classList.add('active-section');
   };
 
   return (
@@ -51,60 +63,17 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                onClick={() => scrollToSection('home')}
-                href="#home"
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'About' ? 'active' : ''}`}
-                onClick={() => scrollToSection('About')}
-                href="#About"
-              >
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'Skills' ? 'active' : ''}`}
-                onClick={() => scrollToSection('Skills')}
-                href="#Skills"
-              >
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'Experience' ? 'active' : ''}`}
-                onClick={() => scrollToSection('Experience')}
-                href="#Experience"
-              >
-                Experience
-              </a>
-            </li>
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'Reviews' ? 'active' : ''}`}
-                onClick={() => scrollToSection('Reviews')}
-                href="#Reviews"
-              >
-                Reviews
-              </a>
-            </li>
-            <li className="nav-item">
-              <a 
-                className={`nav-link ${activeSection === 'Connect' ? 'active' : ''}`}
-                onClick={() => scrollToSection('Connect')}
-                href="#Connect"
-              >
-                Contact
-              </a>
-            </li>
+            {['home', 'About', 'Skills', 'Experience', 'Education', 'Reviews', 'Connect'].map((sectionId) => (
+              <li className="nav-item" key={sectionId}>
+                <a 
+                  className={`nav-link ${activeSection === sectionId ? 'active' : ''}`}
+                  onClick={() => scrollToSection(sectionId)}
+                  href={`#${sectionId}`}
+                >
+                  {sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

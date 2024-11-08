@@ -3,6 +3,12 @@
   height: 30px;
 }
 
+.tagline {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
 .skills{
   min-height: 100vh;
   display: flex;
@@ -13,9 +19,31 @@
 
 .skills-title{
   text-align: left;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-right: 10px;
+  font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
 
-  font-size: 4rem;
+@media (max-width: 768px) {
+  .skills-title {
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .skills{
+    margin: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-title {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .skills{
+    margin: 15px;
+  }
 }
 
 .tech-icon-circle {
@@ -33,9 +61,32 @@
 }
 
 .tagline {
-  font-style: italic;
-  margin: 0;
-  padding: 0;
+  font-size: 0.9rem;
+  color: #8d663f; /* Adjust to your preferred secondary text color */
+  display: block;
+  margin-top: 4px; /* Space between main text and tagline */
+}
+
+.technology-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.tech-icon-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: inherit; /* Adjust as needed */
+  margin-right: 10px;
 }
 
 .tech-list {
@@ -49,12 +100,35 @@
   /* 4 items per row in a column */
 }
 
+@media (max-width: 768px) {
+  .tech-column {
+    flex: 1 1 calc(50% - 20px);
+    /* 2 columns per row on smaller screens */
+  }
+  .skills{
+    margin: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-column {
+    flex: 1 1 100%;
+    /* 1 column per row on very small screens */
+  }
+
+  .tech-item .tagline {
+    font-size: 0.8rem;
+  }
+  .skills{
+    margin: 15px;
+  }
+}
+
 .tech-item {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
   position: relative;
-  /* Add this line to enable the :after pseudo-element */
 }
 
 .tech-item .line {
@@ -82,15 +156,28 @@
 
 .section-title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* Set your desired font family here */
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
 
 .skills-title {
   text-align: left;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* Set your desired font family for Skills title here */
   margin-top: 5px;
-  /* Add this line to add top margin */
 }
 
 @keyframes fadeIn {

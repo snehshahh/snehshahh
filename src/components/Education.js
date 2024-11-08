@@ -4,15 +4,13 @@ import './Educations.css';
 const Educations = () => {
     return (
         <div className="container educations">
-            <div className="row h-100">
+            <div className="row">
                 <div className="col-md-6 mb-4">
-                    <h2 className="educations-title">Education, Certification, & Other Projects</h2>
+                    <h2 className="skills-title">Education, Certifications & Other Projects</h2>
                 </div>
                 <div className="col-md-6">
                     <div className="mb-4">
-                        <div className="Title">
-                            Bachelor of Engineering, Information Technology
-                        </div>
+                        <div className="Title">Bachelor of Engineering, Information Technology</div>
                         <div className="tag">Silveroak University</div>
                         <div className="tag">
                             My time spent at the university allowed me to meet like-minded peers and incredible professors who taught me everything I know about tech.

@@ -11,7 +11,9 @@
   }
   
   .connecttitle {
-    font-size: 2.5rem; /* Default large font size */
+    font-size: 3.5rem; /* Default large font size */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     font-weight: bold;
     margin-bottom: 1rem;
   }

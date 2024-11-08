@@ -8,7 +8,7 @@ const ConnectWithMe = () => {
   return (
     <div className="connectwithme d-flex flex-column align-items-center justify-content-center text-white min-vh-100">
       <h1 className="font-weight-bold mb-4 connecttitle mb-2">CONNECT WITH ME</h1>
-      <h1 className="font-weight-bold mb-4">Sneh Shah</h1>
+      <h1 className="font-weight-bold mb-4">SNEH SHAH</h1>
       <div className="d-flex flex-column align-items-center mb-4">
         <a href="mailto:snehshahhh@gmail.com" className="text-decoration-none mails">
           snehshahhh@gmail.com
