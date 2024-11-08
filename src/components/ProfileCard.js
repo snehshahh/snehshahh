@@ -1,5 +1,5 @@
 import React from 'react';
-import './Profile.css'
+import './Profile.css';
 
 const GithubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
@@ -23,38 +23,23 @@ const LinkedInIcon = () => (
 
 const ProfileCard = () => {
   return (
-    <div className="profile-container flex justify-around items-center h-screen">
-      <div className="containerImage mt-20">
-        <div className="clipped-content">
-          <img
-            src="https://assets.onecompiler.app/42xbbdeeh/42xgys2kf/Sneh.jpg"
-            alt="Sample image"
-          />
-        </div>
-      </div>
-      {/* Text Content */}
-      <div className="content text-center max-w-md">
-        <h1 className="NameSneh text-6xl">
-          SNEH
-          <br />
-          SHAH
-        </h1>
-
-        <p className="title text-2xl mt-2">
-          FULL STACK DEVELOPER
-        </p>
-
-        {/* Social Icons */}
-        <div className="d-flex justify-content-between mt-1">
-          <a href="https://github.com/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
-            <GithubIcon />
-          </a>
-          <a href="https://www.linkedin.com/in/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon />
-          </a>
-          <a href="https://twitter.com/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon />
-          </a>
+    <div className="profile-container">
+      <div className="background-image"></div>
+      <div className="profile-content">
+        <div className="content text-center">
+          <h1 className="NameSneh">SNEH<br />SHAH</h1>
+          <p className="title">FULL STACK DEVELOPER</p>
+          <div className="social-links">
+            <a href="https://github.com/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
+              <GithubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon />
+            </a>
+            <a href="https://twitter.com/snehshahh" className="social-icon bg-black text-white" target="_blank" rel="noopener noreferrer">
+              <TwitterIcon />
+            </a>
+          </div>
         </div>
       </div>
     </div>

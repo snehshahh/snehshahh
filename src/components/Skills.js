@@ -9,6 +9,7 @@ import SqlLogo from '../assets/database.svg';
 import DocumentLogo from '../assets/documents.svg';
 import CodeLogo from '../assets/languages.svg';
 import ToolsLogo from '../assets/tools.svg';
+import Python from '../assets/python.svg';
 
 const Skills = () => {
   useEffect(() => {
@@ -57,16 +58,15 @@ const Skills = () => {
               <div className="tech-column">
                 <div className="tech-item">
                   <div className="tech-icon-circle">
-                    <img src={ReactLogo} className="technology-logo" alt="React Logo" />
+                    <img src={Python} className="technology-logo" alt="React Logo" />
                   </div>
-                  Angular
+                  Flask
                 </div>
                 <div className="tech-item">
                   <div className="tech-icon-circle">
-                    <img src={DotNetLogo} className="technology-logo" alt=".NET Logo" />
+                    <img src={ReactLogo} className="technology-logo" alt=".NET Logo" />
                   </div>
-                  Node.js
-                </div>
+                  React Native                </div>
               </div>
             </div>
           </div>
