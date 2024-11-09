@@ -82,7 +82,7 @@ const Reviews = () => {
             </div>
             <div className="content-container ms-3">
               <p className="recommendation">
-                "Working with Sneh since a year, he helped build an emergency alert webapp for my hiking community. He has been consistently reliable which is a very rare trait that makes him highly dependable. He also shows great resourcefulness and actively tries to figure out solutions to move the project forward. I had a great time working with him and look forward to collaborate with him on more projects in the future."
+                "Working with Sneh since a year, he helped in building an emergency alert webapp for my hiking community. He has been consistently reliable which is a very rare trait that makes him highly dependable. He also shows great resourcefulness and actively tries to figure out solutions to move the project forward. I had a great time working with him and look forward to collaborate with him on more projects in the future."
               </p>
               <h3 className="reviewer-name">
                 <a href="https://www.linkedin.com/in/shubrank/" target="_blank" rel="noopener noreferrer">
