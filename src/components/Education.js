@@ -1,15 +1,66 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Educations.css';
 
 const Educations = () => {
+    const educationRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate the title first
+                        const title = entry.target.querySelector('.education-title');
+                        if (title) {
+                            title.classList.add('animate-fade-up');
+                        }
+
+                        // Animate education content with delay
+                        const mainContent = entry.target.querySelector('.education-content');
+                        if (mainContent) {
+                            setTimeout(() => {
+                                mainContent.classList.add('animate-fade-up');
+                            }, 200);
+                        }
+
+                        // Animate project items with cascading delay
+                        const projects = entry.target.querySelectorAll('.Projects');
+                        projects.forEach((project, index) => {
+                            setTimeout(() => {
+                                project.classList.add('animate-fade-up');
+                            }, 300 + (index * 100));
+                        });
+                    } else {
+                        // Remove animation classes when section is out of view
+                        const elements = entry.target.querySelectorAll(
+                            '.education-title, .education-content, .Projects'
+                        );
+                        elements.forEach(element => {
+                            element.classList.remove('animate-fade-up');
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.2 // Trigger when 20% of the section is visible
+            }
+        );
+
+        if (educationRef.current) {
+            observer.observe(educationRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="container educations">
+        <div className="container educations" ref={educationRef}>
             <div className="row container">
                 <div className="col-md-6 mb-4">
-                    <h2 className="skills-title">Education, Certifications & Other Projects</h2>
+                    <p className="education-title">Education, Certifications & Other Projects</p>
                 </div>
                 <div className="col-md-6">
-                    <div className="mb-4">
+                    <div className="mb-4 education-content">
                         <div className="Title">Bachelor of Engineering, Information Technology</div>
                         <div className="tag">Silveroak University</div>
                         <div className="tag">

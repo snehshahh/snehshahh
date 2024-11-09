@@ -1,9 +1,61 @@
-import React from 'react';
+// Experience.js
+import React, { useEffect, useRef } from 'react';
 import './Experience.css';
 
 const Experience = () => {
+  const experienceRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate the title first
+            const title = entry.target.querySelector('.pagetitle');
+            if (title) {
+              title.classList.add('animate-fade-up');
+            }
+
+            // Animate experience rows with a slight delay
+            const rows = entry.target.querySelectorAll('.experience-row');
+            rows.forEach((row, index) => {
+              setTimeout(() => {
+                row.classList.add('animate-fade-up');
+              }, 200 * (index + 1));
+            });
+
+            // Animate individual experience elements
+            const elements = entry.target.querySelectorAll('.experience-col');
+            elements.forEach((element, index) => {
+              setTimeout(() => {
+                element.classList.add('animate-fade-up');
+              }, 300 + (index * 100));
+            });
+          } else {
+            // Remove animation classes when section is out of view
+            const elements = entry.target.querySelectorAll(
+              '.pagetitle, .experience-row, .experience-col'
+            );
+            elements.forEach(element => {
+              element.classList.remove('animate-fade-up');
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.2 // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="container experience-section">
+    <div className="container experience-section" ref={experienceRef}>
       <div className="pagetitle">
         <div></div>
         <div>
