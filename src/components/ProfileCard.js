@@ -27,7 +27,7 @@ const ProfileCard = () => {
       <div className="background-image"></div>
       <div className="profile-content">
         <div className="content text-center">
-          <h1 className="NameSneh">SNEH<br />SHAH</h1>
+          <h1 className="NameSneh text-black">SNEH<br />SHAH</h1>
           <p className="title">FULL STACK DEVELOPER</p>
           <div className="social-links">
             <a href="https://github.com/snehshahh" className="social-icon-profile bg-black text-white" target="_blank" rel="noopener noreferrer">

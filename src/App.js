@@ -9,6 +9,7 @@ import Experience from './components/Experince.js';
 import Reviews from './components/Reviews';
 import ConnectWithMe from './components/ConnectWithMe';
 import Education from './components/Education';
+import Loader from './components/Loader.js';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -42,9 +43,7 @@ const App = () => {
   if (loading) {
     return (
       <div className="loader">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader/>
       </div>
     );
   }

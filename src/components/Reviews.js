@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Review.css';
 import KundanPatel from '../images/KundanPatel.jpg';
 import Maitri from '../images/Maitri.jpg';
@@ -6,8 +6,57 @@ import Shravan from '../images/Shravan.jpg';
 import Shubrank from '../images/ShubrankMukhiya.jpg';
 
 const Reviews = () => {
+  const reviewsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate the container first
+            const container = entry.target;
+            container.classList.add('animate-fade-up');
+
+            // Animate image containers with delay
+            const imageContainers = container.querySelectorAll('.image-container');
+            imageContainers.forEach((container, index) => {
+              setTimeout(() => {
+                container.classList.add('animate-fade-up');
+              }, 200 * (index + 1));
+            });
+
+            // Animate content containers with delay
+            const contentContainers = container.querySelectorAll('.content-container');
+            contentContainers.forEach((container, index) => {
+              setTimeout(() => {
+                container.classList.add('animate-fade-up');
+              }, 300 * (index + 1));
+            });
+          } else {
+            // Remove animation classes when section is out of view
+            const elements = entry.target.querySelectorAll(
+              '.reviews-container, .image-container, .content-container'
+            );
+            elements.forEach(element => {
+              element.classList.remove('animate-fade-up');
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.2 // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (reviewsRef.current) {
+      observer.observe(reviewsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="reviews-container">
+    <div className="reviews-container" ref={reviewsRef}>
       <div className="container reviews">
         <div className="row mb-4">
           <div className="col-lg-6 d-flex">

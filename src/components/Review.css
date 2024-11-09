@@ -1,10 +1,3 @@
-
-.recommendation {
-  color: white;
-  text-align: left;
-}
-
-
 /* Reviews Container */
 .reviews-container {
   background-color: #8d663f;
@@ -13,14 +6,21 @@
   align-items: center;
   justify-content: center;
   padding-top: 60px;
-  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reviews-container.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Reviews Section */
 .reviews {
   padding: 20px;
   width: 100%;
-  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 /* Profile Image Container */
@@ -29,9 +29,16 @@
   height: 180px;
   overflow: hidden;
   border-radius: 10px;
-  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
   flex-shrink: 0;
-  animation: scaleIn 1.0s ease-out; /* Scale-in effect */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.image-container.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Profile Image */
@@ -48,24 +55,31 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  animation: fadeInUp 1s forwards 0.5s; /* Delay the animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.content-container.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .reviewer-name a {
   text-decoration: none;
   margin-bottom: 10px;
-  color: rgb(52, 52, 52); /* Keeps the link color the same as the parent element */
+  color: rgb(52, 52, 52);
 }
 
 .reviewer-name a:hover {
-  color: #000; /* Optional: Add a different color on hover */
+  color: #000;
 }
 
 .reviewer-name {
   font-weight: bold;
   font-size: 1.2rem;
   margin-top: 10px;
-  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 .position {
@@ -74,12 +88,16 @@
   margin-bottom: 15px;
 }
 
+.recommendation {
+  color: white;
+  text-align: left;
+}
+
 /* Default Styles for Larger Screens */
 .col-lg-6 {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
-  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 .content-container {
@@ -109,9 +127,18 @@
     margin: 0 auto;
   }
 
-  /* Reset the top margin for subsequent review boxes */
   .mt-lg-0 {
     margin-top: 30px !important;
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

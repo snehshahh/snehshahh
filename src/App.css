@@ -2,7 +2,7 @@
 .main-content {
   min-height: 100vh;
   background-color: #f0e6ce;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .loader {

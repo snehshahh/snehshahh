@@ -70,7 +70,7 @@ const Educations = () => {
                     
                     <div className="row">
                         <div className="col-md-6 Projects">
-                            <div className="Title">Linker's db | Live</div>
+                            <div className="Title">Linker's db | <a href='https://chromewebstore.google.com/detail/link-saver/kcancggpgjikndnlbmngcpjjkdcgffdo?hl=en' target='_blank' className='text-decoration-underline text-black'>Live</a></div>
                             <div className="tag">Productivity Platform</div>
                             <div className="tag">
                                 A platform for organizing, sharing, and tracking links, offering seamless access and management across web, mobile, and extension apps.

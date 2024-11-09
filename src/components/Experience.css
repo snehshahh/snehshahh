@@ -10,7 +10,6 @@
 .pagetitle {
   text-align: center;
   font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 50px;
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -20,6 +19,10 @@
 .pagetitle.animate-fade-up {
   opacity: 1;
   transform: translateY(0);
+}
+
+.pagetitle h2 {
+  font-size: 3rem; /* Default size for extra small devices */
 }
 
 .experience-row {
@@ -80,36 +83,34 @@
   color: #333;
 }
 
-/* Custom range for 756px - 990px screens */
+/* Small screens (min-width: 756px - max-width: 990px) */
 @media (min-width: 756px) and (max-width: 990px) {
-  .experience-row {
-    flex-direction: row;
-    align-items: center;
-    margin: 10px 0;
+  .pagetitle {
+    margin-bottom: 0; /* Remove bottom margin */
   }
 
   .pagetitle h2 {
-    font-size: 3.5rem;
+    font-size: 4.2rem; /* Increased slightly */
   }
 
   .experience-col h4 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .experience-col h3 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .experience-col h5 {
-    font-size: 1rem;
-  }
-
-  .experience-col p {
     font-size: 1.1rem;
   }
 
+  .experience-col p {
+    font-size: 1.2rem;
+  }
+
   .date-col h4 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .experience-col {
@@ -118,51 +119,71 @@
   }
 }
 
-/* Large screens (768px - 1200px) */
+/* Medium screens (768px - 1200px) */
 @media (min-width: 768px) and (max-width: 1200px) {
+  .pagetitle {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
   .pagetitle h2 {
-    font-size: 3.5rem;
+    font-size: 4.8rem; /* Increased slightly */
   }
+
   .experience-col h4 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
+
   .experience-col h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
+
   .experience-col h5 {
-    font-size: 1.1rem;
-  }
-  .experience-col p {
     font-size: 1.2rem;
   }
-  .date-col h4 {
-    font-size: 1.6rem;
+
+  .experience-col p {
+    font-size: 1.3rem;
   }
+
+  .date-col h4 {
+    font-size: 1.7rem;
+  }
+
   .experience-row {
     margin: 15px;
   }
 }
 
-/* Extra large screens (1200px and above) */
+/* Large screens (1200px and above) */
 @media (min-width: 1200px) {
+  .pagetitle {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
   .pagetitle h2 {
-    font-size: 4.5rem;
+    font-size: 6rem; /* Increased slightly */
   }
+
   .experience-col h4 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
+
   .experience-col h3 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
+
   .experience-col h5 {
-    font-size: 1.3rem;
-  }
-  .experience-col p {
     font-size: 1.4rem;
   }
-  .date-col h4 {
-    font-size: 2rem;
+
+  .experience-col p {
+    font-size: 1.5rem;
   }
+
+  .date-col h4 {
+    font-size: 2.1rem;
+  }
+
   .experience-row {
     margin: 20px;
   }
