@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Skills.css';
 
 // Import SVG icons
@@ -12,16 +12,59 @@ import ToolsLogo from '../assets/tools.svg';
 import Python from '../assets/python.svg';
 
 const Skills = () => {
+  const skillsRef = useRef(null);
+
   useEffect(() => {
-    // Add animation when the component mounts
-    const techItems = document.querySelectorAll('.tech-item');
-    techItems.forEach((item, index) => {
-      item.style.animation = `fadeIn 0.5s ease-in-out ${index * 0.1}s both`;
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animate the skills title first
+            const title = entry.target.querySelector('.skills-title');
+            if (title) {
+              title.classList.add('animate-fade-up');
+            }
+
+            // Animate section titles with a slight delay
+            const sectionTitles = entry.target.querySelectorAll('.section-title');
+            sectionTitles.forEach((title, index) => {
+              setTimeout(() => {
+                title.classList.add('animate-fade-up');
+              }, 200 * (index + 1));
+            });
+
+            // Animate tech items with cascading delay
+            const techItems = entry.target.querySelectorAll('.tech-item');
+            techItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('animate-fade-up');
+              }, 300 + (index * 100)); // Start after section titles, 100ms delay between items
+            });
+          } else {
+            // Remove animation classes when section is out of view
+            const elements = entry.target.querySelectorAll(
+              '.skills-title, .section-title, .tech-item'
+            );
+            elements.forEach(element => {
+              element.classList.remove('animate-fade-up');
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.2 // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="container skills">
+    <div className="container skills" ref={skillsRef}>
       <div className="row">
         {/* Skills Title (Left side) */}
         <div className="col-md-6">
@@ -66,7 +109,8 @@ const Skills = () => {
                   <div className="tech-icon-circle">
                     <img src={ReactLogo} className="technology-logo" alt=".NET Logo" />
                   </div>
-                  React Native                </div>
+                  React Native
+                </div>
               </div>
             </div>
           </div>

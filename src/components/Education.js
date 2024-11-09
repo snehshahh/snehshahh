@@ -4,7 +4,7 @@ import './Educations.css';
 const Educations = () => {
     return (
         <div className="container educations">
-            <div className="row">
+            <div className="row container">
                 <div className="col-md-6 mb-4">
                     <h2 className="skills-title">Education, Certifications & Other Projects</h2>
                 </div>

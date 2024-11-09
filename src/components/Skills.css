@@ -207,3 +207,43 @@
     transform: translateY(0);
   }
 }
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.tech-item.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.skills-title.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.section-title.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+

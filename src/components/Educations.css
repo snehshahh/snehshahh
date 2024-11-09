@@ -1,69 +1,87 @@
-.educations {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-
-.skills-title {
-    text-align: left;
-    padding-right: 10px;
-    font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-}
-
-.Title {
-    font-weight: 500;
-}
-
-.tag {
-    color: #5d4125;
-    margin: 20px 0px 30px 0px;
-}
-
-@media (min-width: 320px) {
-    .skills-title {
-        font-size: 2.5rem;
-    }
-
-    .Title {
-        font-size: 1.5rem;
-    }
-
-    .tag {
-        font-size: 1.2rem;
-    }
-
-    .educations {
-        margin: 15px;
-    }
-}
-
-@media (min-width: 768px) {
-    .skills-title {
-        font-size: 3rem;
-    }
-
-    .Title {
-        font-size: 1.8rem;
-    }
-
-    .tag {
-        font-size: 1.4rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .skills-title {
-        font-size: 3.5rem;
-    }
-
-    .Title {
-        font-size: 2rem;
-    }
-
-    .tag {
-        font-size: 1.5rem;
-    }
-}
+  /* .educations Section */
+  .educations {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */
+      padding: 50px 0;
+      text-align: left; /* Centers text inside the container */
+      width: 100%;
+      animation: fadeIn 1s ease-in-out; /* Fade-in effect on load */
+  }
+  
+  /* Title Section */
+  .skills-title {
+      text-align: left;
+      padding-right: 10px;
+      font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
+      font-weight: 400;
+      animation: fadeIn 1.5s ease-in-out; /* Fade-in effect */
+  }
+  
+  .Title {
+      font-weight: 500;
+      animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
+  }
+  
+  /* Tag Section */
+  .tag {
+      color: #5d4125;
+      margin: 20px 0 30px 0;
+      font-size: 1.2rem;
+      animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
+  }
+  
+  /* Responsive Design */
+  
+  /* Small Screens (320px and up) */
+  @media (min-width: 320px) {
+      .skills-title {
+          font-size: 2.5rem;
+      }
+  
+      .Title {
+          font-size: 1.5rem;
+      }
+  
+      .tag {
+          font-size: 1.2rem;
+      }
+  
+      .educations {
+          margin: 15px;
+      }
+  }
+  
+  /* Medium Screens (768px and up) */
+  @media (min-width: 768px) {
+      .skills-title {
+          font-size: 3rem;
+      }
+  
+      .Title {
+          font-size: 1.8rem;
+      }
+  
+      .tag {
+          font-size: 1.4rem;
+      }
+  }
+  
+  /* Large Screens (1200px and up) */
+  @media (min-width: 1200px) {
+      .skills-title {
+          font-size: 3.5rem;
+      }
+  
+      .Title {
+          font-size: 2rem;
+      }
+  
+      .tag {
+          font-size: 1.5rem;
+      }
+  }
+  
+ 

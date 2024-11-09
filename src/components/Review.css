@@ -1,3 +1,11 @@
+
+.recommendation {
+  color: white;
+  text-align: left;
+}
+
+
+/* Reviews Container */
 .reviews-container {
   background-color: #8d663f;
   min-height: 100vh;
@@ -5,63 +13,80 @@
   align-items: center;
   justify-content: center;
   padding-top: 60px;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
+/* Reviews Section */
 .reviews {
   padding: 20px;
   width: 100%;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
+/* Profile Image Container */
 .image-container {
   width: 150px;
-  height: 150px;
+  height: 180px;
   overflow: hidden;
   border-radius: 10px;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
   flex-shrink: 0;
+  animation: scaleIn 1.0s ease-out; /* Scale-in effect */
 }
 
+/* Profile Image */
 .profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.2s ease;
 }
 
+/* Content Container */
 .content-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: left;
+  animation: fadeInUp 1s forwards 0.5s; /* Delay the animation */
 }
 
-.recommendation {
-  color: white;
+.reviewer-name a {
+  text-decoration: none;
   margin-bottom: 10px;
+  color: rgb(52, 52, 52); /* Keeps the link color the same as the parent element */
+}
+
+.reviewer-name a:hover {
+  color: #000; /* Optional: Add a different color on hover */
 }
 
 .reviewer-name {
   font-weight: bold;
   font-size: 1.2rem;
   margin-top: 10px;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 .position {
   font-size: small;
   color: black;
+  margin-bottom: 15px;
 }
 
-/* Default styles for larger screens */
+/* Default Styles for Larger Screens */
 .col-lg-6 {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
 }
 
 .content-container {
   margin-left: 20px;
 }
 
-/* Media query for screens smaller than 768px */
+/* Media Query for Screens Smaller than 768px */
 @media screen and (max-width: 768px) {
   .col-lg-6 {
     flex-direction: column;
@@ -76,6 +101,7 @@
   }
 
   .recommendation {
+    color: white;
     text-align: center;
   }
 
@@ -88,3 +114,4 @@
     margin-top: 30px !important;
   }
 }
+

@@ -13,26 +13,24 @@ const Experience = () => {
       </div>
       <div className="experience-row d-flex ml-3">
         <div className="row">
-          <div className="col-md-1">
+          <div className="col-md-1 mr-1">
             <div className="experience-col mt-2">
               <h4>Since 2023</h4>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-5">
             <div className="experience-col">
               <h3>Freelancing</h3>
               <h5>Software Developer</h5>
               <p className='desc'>I managed community-focused projects serving over 45,000 users, working on public data displays and implementing robust safety systems. My freelance work emphasizes effective data presentation and secure, user-centered solutions.</p>
             </div>
           </div>
-
-          <div className="col-md-2"></div>
           <div className="col-md-1">
             <div className="experience-col mt-2">
               <h4>AUG 2022-SEP 2024</h4>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-5">
             <div className="experience-col">
               <h3>Sapphire Software Solutions</h3>
               <h5>Software Engineer I</h5>

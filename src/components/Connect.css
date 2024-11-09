@@ -1,120 +1,145 @@
+.fade-out {
+  animation: fadeOut 3s forwards;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .connectwithme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    background-color: #272625;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #272625;
+  padding: 20px;
+}
 
-    padding: 20px;
+.connecttitle {
+  font-size: 3.5rem; /* Default large font size */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  animation: fadeInUp 1s forwards 0.2s; /* Delay the animation */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.mails {
+  color: #8B4513;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.white-underline {
+  text-decoration: underline;
+  color: white;
+}
+
+/* New class for social media icons container */
+.social-icons-container {
+  display: flex;
+  justify-content: center;  /* Center the icons horizontally */
+  gap: 20px; /* Adjust spacing between icons */
+  margin-top: 20px;
+  width: 100%; /* Ensure it takes up full width */
+}
+
+.social-icon {
+  background-color: #8B4513; /* Brown color */
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
   .connecttitle {
-    font-size: 3.5rem; /* Default large font size */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
 
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
   }
-  
+
   .mails {
-    color: #8B4513;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1rem; /* Smaller font size for mails */
   }
-  
-  .white-underline {
-    text-decoration: underline;
-    color: white;
+
+  .social-icons-container {
+    gap: 15px; /* Reduced gap between social icons */
   }
-  
-  .social-links {
-    display: flex;
-    gap: 20px; /* Adjust spacing as needed */
-    margin-top: 20px;
-  }
-  
+
   .social-icon {
-    background-color: #8B4513; /* Brown color */
-    border-radius: 50%;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
   }
-  
+
   .social-icon img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
-  
-  .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 480px) {
+  .connecttitle {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
   }
-  
-  @media (max-width: 768px) {
-    .connecttitle {
-      font-size: 2rem; /* Reduce font size for smaller screens */
-    }
-  
-    h1 {
-      font-size: 1.5rem; /* Smaller font size for smaller screens */
-    }
-  
-    .mails {
-      font-size: 1rem; /* Smaller font size for mails */
-    }
-  
-    .social-links {
-      gap: 15px; /* Reduced gap between social icons */
-    }
-  
-    .social-icon {
-      width: 50px;
-      height: 50px;
-      padding: 10px;
-    }
-  
-    .social-icon img {
-      width: 25px;
-      height: 25px;
-    }
+
+  h1 {
+    font-size: 1.2rem; /* Smaller font size for very small screens */
   }
-  
-  @media (max-width: 480px) {
-    .connecttitle {
-      font-size: 1.5rem; /* Further reduce font size for very small screens */
-    }
-  
-    h1 {
-      font-size: 1.2rem; /* Smaller font size for very small screens */
-    }
-  
-    .mails {
-      font-size: 0.9rem; /* Smaller font size for very small screens */
-    }
-  
-    .social-links {
-      gap: 10px; /* Even smaller gap between social icons */
-    }
-  
-    .social-icon {
-      width: 45px;
-      height: 45px;
-      padding: 8px;
-    }
-  
-    .social-icon img {
-      width: 20px;
-      height: 20px;
-    }
+
+  .mails {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
   }
-  
+
+  .social-icons-container {
+    gap: 10px; /* Even smaller gap between social icons */
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+  }
+
+  .social-icon img {
+    width: 20px;
+    height: 20px;
+  }
+}

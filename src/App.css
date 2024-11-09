@@ -1,21 +1,131 @@
 /* App.css */
-.app-container {
+.main-content {
   min-height: 100vh;
   background-color: #f0e6ce;
   overflow-x: hidden;
 }
 
-.navbar, .section {
-  background-color: #f0e6ce;
-  overflow-x: hidden;
-}
-
-/* Loader Styles */
-.loader-container {
-  min-height: 100vh;
+.loader {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f1eee7;
 }
 
+.navbar {
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar-scrolled {
+  background-color: transparent;
+}
+
+.navbar-nav {
+  gap: 1.5rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #666 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #333 !important;
+}
+
+.nav-link.active {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Updated navbar-toggler styles */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0;
+  margin-left: 1rem; /* Added left margin */
+  position: relative;
+}
+
+/* Container padding adjustment for mobile */
+@media (max-width: 991px) {
+  .container {
+    padding-left: 0; /* Remove default container padding */
+    padding-right: 15px;
+  }
+  
+  /* Specific positioning for the toggle button */
+  .navbar-toggler {
+    margin-left: 15px; /* Consistent margin with design */
+  }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 5rem 2rem 2rem;
+    background-color: #f0e6ce;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem !important;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page Transition Animation */
+.main-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

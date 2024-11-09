@@ -1,275 +1,331 @@
 .profile-container {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-  
-  .background-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://assets.onecompiler.app/42xbbdeeh/42xgys2kf/Sneh.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://assets.onecompiler.app/42xbbdeeh/42xgys2kf/Sneh.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+  border-radius: 15px;
+  color: black;
+}
+
+.content {
+  margin-left: 205px;
+}
+
+.NameSneh {
+  font-size: 3.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.title {
+  font-family: 'Open Sauce', sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icon-profile {
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.social-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon-profile:hover {
+  opacity: 0.75;
+}
+
+/* Medium devices (tablets, 1024px and up) */
+@media (max-width: 1024px) {
   .profile-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    padding: 20px;
-    text-align: left;
-    border-radius: 15px;
-    color: black;
+    max-width: 80%;
+    padding: 16px;
   }
-  
+
   .content {
-    margin-left: 205px;
+    margin-left: 150px;
   }
-  
+
   .NameSneh {
-    font-size: 3.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-size: 3rem;
   }
-  
+
   .title {
-    font-family: 'Open Sauce', sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0 1rem;
+    font-size: 1.4rem;
+  }
+
+  .social-icon-profile {
+    width: 44px;
+    height: 44px;
   }
   
+  .social-svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Devices between Medium and Small (1024px to 900px) */
+@media (max-width: 900px) {
+  .profile-content {
+    max-width: 85%;
+    padding: 14px;
+  }
+
+  .content {
+    margin-left: 120px;
+  }
+
+  .NameSneh {
+    font-size: 2.8rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
   .social-links {
-    margin-left: 45px;
-    display: flex;
     gap: 1rem;
-    justify-content: flex-start;
-  }
-  
-  .social-icon {
-    color: white;
-    transition: opacity 0.2s;
-  }
-  
-  .social-icon:hover {
-    opacity: 0.75;
-  }
-  
-  .social-icon svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  
-  /* Medium devices (tablets, 768px and up) */
-  @media (max-width: 1024px) {
-    .profile-content {
-      max-width: 80%;
-      padding: 16px;
-    }
-  
-    .content {
-      margin-left: 150px;
-    }
-  
-    .NameSneh {
-      font-size: 3rem;
-    }
-  
-    .title {
-      font-size: 1.4rem;
-    }
-  }
-  
-  /* Small devices (landscape phones, 576px and up) */
-  @media (max-width: 768px) {
-    .profile-content {
-      max-width: 90%;
-      padding: 12px;
-    }
-  
-    .content {
-      margin-left: 100px;
-    }
-  
-    .NameSneh {
-      font-size: 2.5rem;
-    }
-  
-    .title {
-      font-size: 1.2rem;
-    }
-  
-    .social-links {
-      gap: 0.8rem;
-      margin-left: 30px;
-    }
-  }
-  
-  /* Extra small devices (portrait phones, less than 576px) */
-  @media (max-width: 576px) {
-    .profile-content {
-      max-width: 100%;
-      padding: 10px;
-    }
-  
-    .content {
-      margin-left: 25px;
-      margin-top: 20px;
-    }
-  
-    .NameSneh {
-      font-size: 2rem;
-    }
-  
-    .title {
-      font-size: 1rem;
-    }
-  
-    .social-links {
-      gap: 0.6rem;
-      margin-left: 20px;
-    }
-  }
-  
-  /* Ultra small devices (less than 400px) */
-  @media (max-width: 400px) {
-    .profile-content {
-      padding: 8px;
-      text-align: center;
-    }
-  
-    .content {
-      margin-left: 20px;
-    }
-  
-    .NameSneh {
-      font-size: 1.75rem;
-    }
-  
-    .title {
-      font-size: 0.9rem;
-    }
-  
-    .social-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      margin-left: 0;
-    }
   }
 
- /* Base styles (above 420px, already covered by previous code) */
+  .social-icon-profile {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  
+  .social-svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 
-/* Extra small devices (420px and below) */
-@media (max-width: 420px) {
-    .profile-content {
-      padding: 10px;
-      text-align: center;
-    }
-  
-    .content {
-      margin-left: 20px;
-    }
-  
-    .NameSneh {
-      font-size: 1.8rem;
-    }
-  
-    .title {
-      font-size: 1rem;
-    }
-  
-    .social-links {
-      flex-direction: row;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-left: 0;
-    }
-  
-    .social-icon {
-      width: 1.2rem; /* Set the icon container size */
-      height: 1.2rem;
-    }
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+  .profile-content {
+    max-width: 90%;
+    padding: 12px;
+  }
+
+  .content {
+    margin-left: 100px;
+  }
+
+  .NameSneh {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .social-icon-profile {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
   }
   
-  /* 375px and below */
-  @media (max-width: 375px) {
-    .profile-content {
-      padding: 8px;
-    }
-  
-    .NameSneh {
-      font-size: 1.6rem;
-    }
-  
-    .title {
-      font-size: 0.9rem;
-    }
-  
-    .social-links {
-      flex-direction: row;
-      gap: 0.4rem;
-      justify-content: center;
-    }
-  
-    .social-icon {
-      width: 1rem; /* Reduce icon container size */
-      height: 1rem;
-    }
+  .social-svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  .profile-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .content {
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+
+  .NameSneh {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 0.6rem;
+  }
+
+  .social-icon-profile {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
   
-  /* Mobile S (320px and below) */
-  @media (max-width: 320px) {
-    .profile-content {
-      padding: 6px;
-    }
-  
-    .NameSneh {
-      font-size: 1.4rem;
-    }
-  
-    .title {
-      font-size: 0.8rem;
-    }
-  
-    .social-links {
-      flex-direction: row;
-      gap: 0.3rem;
-      justify-content: center;
-    }
-  
-    .social-icon {
-      width: 0.9rem; /* Further reduce icon container size */
-      height: 0.9rem;
-    }
+  .social-svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Ultra small devices (less than 400px) */
+@media (max-width: 400px) {
+  .profile-content {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 20px;
+  }
+
+  .NameSneh {
+    font-size: 1.75rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .social-icon-profile {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
   }
   
-  /* Extra small devices (250px and below) */
-  @media (max-width: 250px) {
-    .profile-content {
-      padding: 4px;
-    }
-  
-    .NameSneh {
-      font-size: 1.2rem; /* Reduce font size for very small screens */
-    }
-  
-    .title {
-      font-size: 0.7rem;
-    }
-  
-    .social-links {
-      flex-direction: row;
-      gap: 0.2rem;
-      justify-content: center;
-    }
-  
-    .social-icon {
-      width: 0.7rem; /* Smallest icon size for 250px */
-      height: 0.7rem;
-    }
+  .social-svg {
+    width: 12px;
+    height: 12px;
   }
-      
+}
+
+/* Extra small devices (375px and below) */
+@media (max-width: 375px) {
+  .profile-content {
+    padding: 8px;
+  }
+
+  .NameSneh {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 0.4rem;
+  }
+
+  .social-icon-profile {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+  }
+  
+  .social-svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* Mobile S (320px and below) */
+@media (max-width: 320px) {
+  .profile-content {
+    padding: 6px;
+  }
+
+  .NameSneh {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .social-links {
+    gap: 0.3rem;
+  }
+
+  .social-icon-profile {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+  }
+  
+  .social-svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small devices (250px and below) */
+@media (max-width: 250px) {
+  .profile-content {
+    padding: 4px;
+  }
+
+  .NameSneh {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 0.7rem;
+  }
+
+  .social-links {
+    gap: 0.2rem;
+  }
+
+  .social-icon-profile {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+  
+  .social-svg {
+    width: 8px;
+    height: 8px;
+  }
+}

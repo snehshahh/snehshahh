@@ -1,81 +1,138 @@
+/* Experience.css */
+
+/* Add fade-in and slide-up animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .experience-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .pagetitle {
   text-align: center;
   font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .pagetitle h2 {
   font-weight: 400;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .experience-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: auto; /* Pushes the row to the bottom */
+  margin-top: auto;
 }
 
-.experience-col h4 { 
+.experience-col {
+  padding: 10px 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.experience-col h4, .experience-col h5, .experience-col p {
+  margin: 5px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.experience-col h4 {
   color: #555;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .experience-col h3 {
   font-weight: bold;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .experience-col h5 {
   color: #555;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
 .experience-col p {
   color: #5d4125;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
 .date-col h4 {
+  margin-right: 10px;
   font-weight: bold;
   color: #333;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
-@media (min-width: 320px) {
+/* Custom range for 756px - 990px screens */
+@media (min-width: 756px) and (max-width: 990px) {
+  .experience-row {
+    flex-direction: row; /* Stack columns vertically */
+    align-items: center;
+    margin: 10px 0; /* Add vertical margin */
+  }
+
   .pagetitle h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
+
   .experience-col h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
+
   .experience-col h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
+
   .experience-col h5 {
-    font-size: 0.9rem;
-  }
-  .experience-col p {
     font-size: 1rem;
   }
-  .date-col h4 {
-    font-size: 1.5rem;
+
+  .experience-col p {
+    font-size: 1.1rem;
   }
-  .experience-section{
-    margin: 15px;
+
+  .date-col h4 {
+    font-size: 1.6rem;
+  }
+
+  .experience-col {
+    padding: 15px 10px; /* Add padding for spacing */
+    text-align: center; /* Center-align text for better readability */
   }
 }
 
-@media (min-width: 768px) {
+/* Large screens (768px - 1200px) */
+@media (min-width: 768px) and (max-width: 1200px) {
   .pagetitle h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .experience-col h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .experience-col h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .experience-col h5 {
     font-size: 1.1rem;
@@ -84,16 +141,17 @@
     font-size: 1.2rem;
   }
   .date-col h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
-  .experience-section{
+  .experience-row {
     margin: 15px;
   }
 }
 
+/* Extra large screens (1200px and above) */
 @media (min-width: 1200px) {
   .pagetitle h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .experience-col h4 {
     font-size: 1.8rem;
@@ -109,5 +167,8 @@
   }
   .date-col h4 {
     font-size: 2rem;
+  }
+  .experience-row {
+    margin: 20px;
   }
 }
