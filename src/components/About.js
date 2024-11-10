@@ -3,7 +3,7 @@ import './About.css';
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -46,10 +46,10 @@ const AboutSection = () => {
             <small className="who-i-am text-uppercase d-block">Who AM I</small>
             <h1 className="about-title">(HE/HIM)</h1>
             <p className="about-subtitle mx-auto">
-              I am a Full Stack Developer who's passionate about helping people achieve their health and fitness goals.
+              I'm a Full Stack Developer dedicated to empowering others to turn their tech dreams into reality.
             </p>
             <p className="about-description mx-auto mt-4">
-              I'm a full-stack developer who loves turning ideas into fully functional websites and applications. 
+              I'm a full-stack developer who loves turning ideas into fully functional websites and applications.
               Whether it's building a sleek front-end or ensuring the back-end runs like a well-oiled machine,
               I thrive on bringing concepts to life online. When I'm not coding, you'll probably find me playing music—
               it's my favorite way to unwind and fuel my creativity. From tech to tunes, I like to keep things dynamic.
