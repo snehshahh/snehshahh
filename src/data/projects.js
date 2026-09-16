@@ -138,7 +138,7 @@ const PROJECTS = [
     role: 'Freelance · Full Stack Developer',
     period: 'Since 2023',
     gif: 'hiking-alert.gif',
-    alt: 'Screen recording of the Hiking Alert platform: a trekker registers a trip with an expected return time and nominates the contacts to be alerted.',
+    alt: 'Two screens from the Hiking Alert platform: the alerts list showing a Hampta Pass trip with its return time and alert status, and the WhatsApp check-in that asks the trekker to confirm they are back before emergency contacts are notified.',
     description:
       "A safety net for trekkers. A hiker registers a trip with an expected return time; if they don't check in before it lapses, the platform automatically escalates to their emergency contacts over WhatsApp. I built the React front end, the Firebase data layer, and the Node.js webhook that parses replies and resolves alerts in two-way conversations.",
     tags: ['React', 'Firebase', 'Node.js', 'Meta WhatsApp Cloud API', 'Webhooks'],
@@ -188,6 +188,10 @@ const PROJECTS = [
     },
   },
 
+  // Blip is commented out until the client gives permission to show the work
+  // publicly. Nothing below renders while it stays commented; uncomment the
+  // object to bring the card back exactly as it was.
+  /*
   {
     id: 'blip',
     slug: 'blip',
@@ -203,6 +207,7 @@ const PROJECTS = [
     linkLabel: 'Visit Blip',
     // Client work — card only, no detail page.
   },
+  */
 
   {
     id: 'linkers-db',
@@ -211,7 +216,7 @@ const PROJECTS = [
     role: 'Personal Project',
     period: '2024',
     gif: 'linkers-db.gif',
-    alt: "Screen recording of Linker's DB: saving a tab with a note from the Chrome extension, then finding it again in the web dashboard.",
+    alt: "An animated mark for Linker's DB rather than a screen capture: two halves of a chain link joining together, surrounded by the phrases one click, collections, any device and share without signup.",
     description:
       'A dedicated URL management platform — save, tag and retrieve links from a React web app or straight from the browser through a companion Chrome extension, with everything kept in sync behind one account.',
     tags: ['React', 'Chrome Extension', 'Firebase'],

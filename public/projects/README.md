@@ -13,8 +13,19 @@ These are referenced by the `gif` field of each entry in `src/components/Project
 | `crisscross.gif`    | Crisscross                        |
 | `ipo-milega.gif`    | IPO Milega                        |
 | `hiking-alert.gif`  | Hiking Alert Platform             |
-| `blip.gif`          | Blip — Bulk Ads Manager           |
 | `linkers-db.gif`    | Linker's DB                       |
+
+Not every file here is a screen recording, and the `alt` text on each project
+says which is which:
+
+- `crisscross.gif` is a capture of the running app.
+- `ipo-milega.gif` and `hiking-alert.gif` are composed from screenshots of the
+  live products, cross-faded rather than filmed.
+- `linkers-db.gif` is a decorative mark, not a product screen. If a real
+  recording replaces it, update that project's `alt` text to match.
+
+Blip has no entry: the project is commented out in `src/data/projects.js`
+pending the client's permission, and no client asset is stored here.
 
 A missing file is not a build error — the card falls back to a "Demo coming soon"
 placeholder, so you can ship the section before every recording is ready.
