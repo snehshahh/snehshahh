@@ -59,7 +59,10 @@ const ProjectDetail = () => {
             {project.role}
             {project.period && <span className="detail-meta-period">{project.period}</span>}
           </p>
-          <h1 className="detail-title">{project.title}</h1>
+          <h1 className="detail-title">
+            {project.title}
+            {project.badge && <span className="detail-badge">{project.badge}</span>}
+          </h1>
           <p className="detail-tagline">{detail.tagline}</p>
 
           {project.link && (

@@ -187,6 +187,24 @@
   margin: 6px 0 0;
 }
 
+/* Small capability marker set beside a project title, e.g. AI. */
+.project-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  padding: 3px 10px;
+  border: 1px solid rgba(93, 65, 37, 0.45);
+  border-radius: 999px;
+  background-color: rgba(93, 65, 37, 0.08);
+  font-family: var(--font-body);
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-body);
+  translate: 0 -0.18em;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;

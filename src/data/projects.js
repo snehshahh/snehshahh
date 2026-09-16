@@ -69,6 +69,7 @@ const PROJECTS = [
     id: 'ipomilega',
     slug: 'ipo-milega',
     title: 'IPO Milega',
+    badge: 'AI',
     role: 'Product Engineering',
     period: '2025 — 2026',
     gif: 'ipo-milega.gif',

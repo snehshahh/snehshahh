@@ -114,7 +114,10 @@ const Projects = () => {
 
             <div className="col-12 col-lg-6 project-content">
               {project.period && <h4 className="project-period">{project.period}</h4>}
-              <h3 className="project-title">{project.title}</h3>
+              <h3 className="project-title">
+                {project.title}
+                {project.badge && <span className="project-badge">{project.badge}</span>}
+              </h3>
               <h5 className="project-role">{project.role}</h5>
               <p className="project-description">{project.description}</p>
 
