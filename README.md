@@ -1,4 +1,4 @@
-# Hi there! 👋 I'm Sneh
+# Hey! I'm Sneh
 
 Welcome to my GitHub profile! Here's a bit about me:
 
