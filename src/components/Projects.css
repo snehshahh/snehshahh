@@ -157,6 +157,36 @@
   color: #5d4125;
 }
 
+/* ---------- Metrics ---------- */
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  margin: 20px 0 0;
+}
+
+.project-metric {
+  min-width: 0;
+}
+
+.project-metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.project-metric-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 6px 0 0;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;

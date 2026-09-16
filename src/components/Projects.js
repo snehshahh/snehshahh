@@ -4,6 +4,23 @@ import './Projects.css';
 
 const PROJECTS = [
   {
+    id: 'crisscross',
+    title: 'Crisscross',
+    role: 'Personal Product · Design & Build',
+    period: '2026',
+    gif: 'crisscross.gif',
+    alt: 'Screen recording of Crisscross: two players join a room with a shared code and play a two-player game side by side with a live video call running.',
+    description:
+      'Twelve two-player games behind one room code, with a video call built into the same tab so people who are apart can play and talk without juggling apps. No signup and no download — one player starts a room, the other joins with the code. Room and game state sync live through Firebase, and the call connects the two browsers directly over WebRTC with a TURN relay for the networks that cannot be reached any other way.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Firebase', 'WebRTC', 'Tailwind CSS'],
+    metrics: [
+      { value: '250+', label: 'Players in week one' },
+      { value: '1,000+', label: 'Rooms created' },
+    ],
+    link: 'https://crisscross-arena.vercel.app',
+    linkLabel: 'Play Crisscross',
+  },
+  {
     id: 'hiking-alert',
     title: 'Hiking Alert Platform',
     role: 'Freelance · Full Stack Developer',
@@ -156,6 +173,17 @@ const Projects = () => {
               <h3 className="project-title">{project.title}</h3>
               <h5 className="project-role">{project.role}</h5>
               <p className="project-description">{project.description}</p>
+
+              {project.metrics && (
+                <dl className="project-metrics">
+                  {project.metrics.map((metric) => (
+                    <div className="project-metric" key={metric.label}>
+                      <dt className="project-metric-value">{metric.value}</dt>
+                      <dd className="project-metric-label">{metric.label}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
 
               <ul className="project-tags">
                 {project.tags.map((tag) => (

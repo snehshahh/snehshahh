@@ -10,6 +10,7 @@ These are referenced by the `gif` field of each entry in `src/components/Project
 
 | File                | Project                           |
 | ------------------- | --------------------------------- |
+| `crisscross.gif`    | Crisscross                        |
 | `hiking-alert.gif`  | Hiking Alert Platform             |
 | `blip.gif`          | Blip — Bulk Ads Manager           |
 | `linkers-db.gif`    | Linker's DB                       |
