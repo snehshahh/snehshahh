@@ -10,6 +10,9 @@
   --color-body: #5d4125;
   --color-muted: #6b5847;
   --color-rule: rgba(93, 65, 37, 0.18);
+
+  /* One horizontal gutter for every section, so nothing touches the edge. */
+  --page-gutter: clamp(22px, 5.5vw, 40px);
 }
 
 /* Bootstrap loads after this file and sets `body { font-family: var(--bs-body-font-family) }`.

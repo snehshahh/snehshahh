@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 80px var(--page-gutter);
 }
 
 /* ---------- Section heading ---------- */
@@ -177,7 +177,7 @@
 
 @media (max-width: 575px) {
   .experience-section {
-    padding: 60px 4px;
+    padding: 56px var(--page-gutter);
   }
 
   .experience-heading {

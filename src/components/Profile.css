@@ -95,38 +95,45 @@
   height: clamp(17px, 1.9vw, 21px);
 }
 
-/* Portrait screens: a landscape photo crops hard, so the wash turns vertical
-   and the name sits low, clear of the subject's face. */
+/* Portrait screens: filling a tall phone with a landscape photo crops it to a
+   sliver and buries the text in it. The photo becomes a contained card instead,
+   with the name on clean cream underneath — no wash needed. */
 @media (max-width: 767px) {
   .profile-container {
-    align-items: flex-end;
+    display: block;
+    align-items: initial;
+    padding: 92px var(--page-gutter) 56px;
   }
 
   .profile-photo {
-    object-position: 68% 30%;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: min(46vh, 400px);
+    border-radius: 18px;
+    object-position: 64% 26%;
+    box-shadow: 0 12px 34px rgba(93, 65, 37, 0.20);
   }
 
   .profile-scrim {
-    background: linear-gradient(
-      to top,
-      rgba(240, 230, 206, 0.98) 0%,
-      rgba(240, 230, 206, 0.92) 34%,
-      rgba(240, 230, 206, 0.45) 56%,
-      rgba(240, 230, 206, 0) 78%
-    );
+    display: none;
   }
 
   .profile-content {
-    padding: 0 0 14vh;
+    padding: 30px 0 0;
   }
 
   .content {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin: 0;
+    max-width: none;
+  }
+
+  .NameSneh {
+    font-size: clamp(2.9rem, 13vw, 4rem);
   }
 
   .title {
-    margin: 14px 0 20px;
+    margin: 14px 0 22px;
   }
 }
 

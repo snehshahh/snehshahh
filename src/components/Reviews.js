@@ -63,7 +63,7 @@ const Reviews = () => {
             <div className="image-container">
               <img src={KundanPatel} alt="Kundan Patel" className="profile-image" />
             </div>
-            <div className="content-container ms-3">
+            <div className="content-container">
               <p className="recommendation">
                 "Sneh has been a valuable asset to the team, particularly during our recent deployment. His ability to quickly grasp new technologies and solve complex issues, even with unfamiliar tools, is truly impressive. He worked closely with me, demonstrating a strong work ethic and a keen eye for detail. With his rapid learning curve and problem-solving skills, he has the potential to become a highly skilled developer."
               </p>
@@ -80,7 +80,7 @@ const Reviews = () => {
             <div className="image-container">
               <img src={Shubrank} alt="Shubrank Mukhiya" className="profile-image" />
             </div>
-            <div className="content-container ms-3">
+            <div className="content-container">
               <p className="recommendation">
                 "Working with Sneh since a year, he helped in building an emergency alert webapp for my hiking community. He has been consistently reliable which is a very rare trait that makes him highly dependable. He also shows great resourcefulness and actively tries to figure out solutions to move the project forward. I had a great time working with him and look forward to collaborate with him on more projects in the future."
               </p>
@@ -99,7 +99,7 @@ const Reviews = () => {
             <div className="image-container">
               <img src={Maitri} alt="Maitri Shah" className="profile-image" />
             </div>
-            <div className="content-container ms-3">
+            <div className="content-container">
               <p className="recommendation">
                 "I highly recommend Sneh as a software developer. He's incredibly efficient, attentive to detail, and listens carefully to client needs. His dedication to delivering high-quality work is impressive, and he's always reliable in meeting deadlines."
               </p>
@@ -116,7 +116,7 @@ const Reviews = () => {
             <div className="image-container">
               <img src={Shravan} alt="Shravan Parikh" className="profile-image" />
             </div>
-            <div className="content-container ms-3">
+            <div className="content-container">
               <p className="recommendation">
                 "Working with Sneh on the project was fantastic! His expertise, creativity, and positive attitude made the experience enjoyable and successful. Looking forward to collaborating again soon!"
               </p>

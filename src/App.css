@@ -54,16 +54,17 @@
   position: relative;
 }
 
-/* Container padding adjustment for mobile */
+/* Every .container carries the same gutter on both sides. This previously
+   zeroed padding-left and set padding-right to 15px, which is why mobile
+   content sat flush against the left edge. */
+.container {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
 @media (max-width: 991px) {
-  .container {
-    padding-left: 0; /* Remove default container padding */
-    padding-right: 15px;
-  }
-  
-  /* Specific positioning for the toggle button */
   .navbar-toggler {
-    margin-left: 15px; /* Consistent margin with design */
+    margin-left: 0;
   }
 }
 

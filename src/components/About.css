@@ -7,14 +7,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 2rem 1rem;
+    padding: 2rem var(--page-gutter);
 }
 
 .about-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .who-i-am {
@@ -88,6 +88,6 @@
 
     .about-subtitle, .about-description {
         font-size: 1rem;
-        padding: 0 1rem;
+        padding: 0;
     }
 }

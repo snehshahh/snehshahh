@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px var(--page-gutter);
 }
 
 .projects-section .pagetitle {
@@ -259,7 +259,7 @@
   }
 
   .project-content {
-    padding: 16px 4px;
+    padding: 16px 12px;
     text-align: center;
   }
 
