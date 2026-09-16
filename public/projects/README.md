@@ -11,7 +11,7 @@ These are referenced by the `gif` field of each entry in `src/components/Project
 | File                | Project                           |
 | ------------------- | --------------------------------- |
 | `hiking-alert.gif`  | Hiking Alert Platform             |
-| `social-api.gif`    | Social Platform API Integrations  |
+| `blip.gif`          | Blip — Bulk Ads Manager           |
 | `linkers-db.gif`    | Linker's DB                       |
 
 A missing file is not a build error — the card falls back to a "Demo coming soon"
