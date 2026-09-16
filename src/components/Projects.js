@@ -9,7 +9,7 @@ const PROJECTS = [
     role: 'Personal Product · Design & Build',
     period: '2026',
     gif: 'crisscross.gif',
-    alt: 'Screen recording of Crisscross: two players join a room with a shared code and play a two-player game side by side with a live video call running.',
+    alt: 'Screen recording of the Crisscross landing page: cycling through the player avatars, typing a codename, and flipping the site into dark mode.',
     description:
       'Twelve two-player games behind one room code, with a video call built into the same tab so people who are apart can play and talk without juggling apps. No signup and no download — one player starts a room, the other joins with the code. Room and game state sync live through Firebase, and the call connects the two browsers directly over WebRTC with a TURN relay for the networks that cannot be reached any other way.',
     tags: ['Next.js', 'React', 'TypeScript', 'Firebase', 'WebRTC', 'Tailwind CSS'],
