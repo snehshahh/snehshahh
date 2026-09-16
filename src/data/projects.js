@@ -73,7 +73,7 @@ const PROJECTS = [
     role: 'Product Engineering',
     period: '2025 — 2026',
     gif: 'ipo-milega.gif',
-    alt: 'Screen recording of IPO Milega: browsing live and upcoming Indian IPOs, then opening an analysis page with allocation and financial charts.',
+    alt: 'Two screens from IPO Milega: the dashboard of live IPOs with grey-market premium and subscription figures, and an analysis page showing the overall score, its radar breakdown, and the listed strengths and concerns.',
     description:
       'A research platform for Indian IPOs. Live, upcoming and past issues in one filterable dashboard, and behind each one a full analysis page — scored fundamentals, a risk meter, investor-quota allocation and multi-year financials as interactive charts. Admins edit any field inline by double-clicking it, and an AI parser reads a DRHP or RHP prospectus to populate the analysis rather than someone keying it in by hand.',
     tags: ['Next.js', 'TypeScript', 'MongoDB', 'Better Auth', 'Recharts', 'AWS S3'],
