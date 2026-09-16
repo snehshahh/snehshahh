@@ -188,18 +188,14 @@ const PROJECTS = [
     },
   },
 
-  // Blip is commented out until the client gives permission to show the work
-  // publicly. Nothing below renders while it stays commented; uncomment the
-  // object to bring the card back exactly as it was.
-  /*
   {
     id: 'blip',
     slug: 'blip',
     title: 'Blip — TikTok Ads Integration',
     role: 'Client Engagement · via BMV System Integration',
     period: '',
-    gif: 'blip.gif',
-    alt: "Screen recording of Blip's bulk ad launcher: authorizing a TikTok ad account, then watching per-ad launch progress stream in live.",
+    gif: 'blip.png',
+    alt: "The Blip logo: a red rocket lifting off, set on a cream tile.",
     description:
       "Built the end-to-end TikTok Ads integration for Blip's bulk ad-launching product — the OAuth 2.0 login flow, account authorization, and the backend and frontend connectivity to the TikTok Ads API. Launch jobs keep their state in Redis and stream progress to the browser over Server-Sent Events, so a bulk run reports live per-ad status instead of being polled for it.",
     tags: ['React.js', 'Node.js', 'Redis', 'Server-Sent Events', 'OAuth 2.0', 'TikTok Ads API'],
@@ -207,7 +203,6 @@ const PROJECTS = [
     linkLabel: 'Visit Blip',
     // Client work — card only, no detail page.
   },
-  */
 
   {
     id: 'linkers-db',

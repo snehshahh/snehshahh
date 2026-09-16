@@ -11,7 +11,7 @@ const ROLES = [
     current: true,
     points: [
       'Architected a full production pipeline tracking video content operations end to end, from scripting through to social posting, surfacing the process stats that let management pinpoint bottlenecks and lift team productivity by 30%.',
-      "Engineered a proof of concept enabling ad creation through TikTok Ads Manager despite India's platform ban, integrating the TikTok Business API and Developer API across multiple platforms. Client approval of the POC led directly to a paid client engagement.",
+      "Engineered a proof of concept enabling ad creation through TikTok Ads Manager despite India's platform ban, integrating the TikTok Business API and Developer API across multiple platforms. Client approval of the POC led directly to the withblip.com engagement.",
       'Overhauled warehouse downtime recording by designing and deploying an integrated tracking system, reaching 90% accuracy in shift-level downtime capture.',
       'Identified and engineered workarounds for platform constraints, delivering solutions that operated beyond the limits of the existing environment.',
     ],

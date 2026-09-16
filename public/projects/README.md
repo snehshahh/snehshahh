@@ -14,6 +14,7 @@ These are referenced by the `gif` field of each entry in `src/components/Project
 | `ipo-milega.gif`    | IPO Milega                        |
 | `hiking-alert.gif`  | Hiking Alert Platform             |
 | `linkers-db.gif`    | Linker's DB                       |
+| `blip.png`          | Blip — TikTok Ads Integration      |
 
 Not every file here is a screen recording, and the `alt` text on each project
 says which is which:
@@ -23,9 +24,9 @@ says which is which:
   live products, cross-faded rather than filmed.
 - `linkers-db.gif` is a decorative mark, not a product screen. If a real
   recording replaces it, update that project's `alt` text to match.
-
-Blip has no entry: the project is commented out in `src/data/projects.js`
-pending the client's permission, and no client asset is stored here.
+- `blip.png` is the client's own logo, published with their permission. It is
+  a still, not an animation — the `gif` field just holds a filename, so any
+  image format works.
 
 A missing file is not a build error — the card falls back to a "Demo coming soon"
 placeholder, so you can ship the section before every recording is ready.
