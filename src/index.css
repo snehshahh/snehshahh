@@ -1,10 +1,48 @@
-body {
+:root {
+  /* Display face: warm old-style serif, used for section headings. */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  /* Body face: geometric sans, used for everything else. */
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Palette, previously repeated as literals across the component stylesheets. */
+  --color-bg: #f0e6ce;
+  --color-ink: #2b1d10;
+  --color-body: #5d4125;
+  --color-muted: #6b5847;
+  --color-rule: rgba(93, 65, 37, 0.18);
+}
+
+/* Bootstrap loads after this file and sets `body { font-family: var(--bs-body-font-family) }`.
+   Repointing its variable keeps Bootstrap components on the new face, and the
+   `html body` selector outranks Bootstrap's plain `body` regardless of load order. */
+:root {
+  --bs-body-font-family: var(--font-body);
+}
+
+html body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-optical-sizing: auto;
+}
+
+/* Shared across Experience, Education and Skills section headers. */
+.section-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 10px;
 }
 
 code {

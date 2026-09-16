@@ -18,14 +18,14 @@ const PROJECTS = [
   },
   {
     id: 'blip',
-    title: 'Blip — Bulk Ads Manager',
-    role: 'Freelance · API & Integrations',
-    period: 'Since 2023',
+    title: 'Blip — TikTok Ads Integration',
+    role: 'Client Engagement · via BMV System Integration',
+    period: '',
     gif: 'blip.gif',
-    alt: 'Screen recording of Blip: selecting connected TikTok and Meta ad accounts and pushing a batch of ads live in a single run.',
+    alt: "Screen recording of Blip's bulk ad launcher: authorizing a TikTok ad account, then watching per-ad launch progress stream in live.",
     description:
-      'A bulk ads manager that launches and edits campaigns across several ad accounts in one pass instead of one ad at a time. I worked on the platform integrations — OAuth onboarding for connected ad accounts, mapping a single bulk request onto the TikTok Marketing API and the Meta Marketing API, and batching writes so a large run stays inside each platform rate limit and reports per-ad status rather than failing as one opaque blob.',
-    tags: ['TikTok Marketing API', 'Meta Marketing API', 'OAuth 2.0', 'Node.js', 'Bulk Operations'],
+      "Built the end-to-end TikTok Ads integration for Blip's bulk ad-launching product — the OAuth 2.0 login flow, account authorization, and the backend and frontend connectivity to the TikTok Ads API. Launch jobs keep their state in Redis and stream progress to the browser over Server-Sent Events, so a bulk run reports live per-ad status instead of being polled for it.",
+    tags: ['React.js', 'Node.js', 'Redis', 'Server-Sent Events', 'OAuth 2.0', 'TikTok Ads API'],
     link: 'https://withblip.com',
     linkLabel: 'Visit Blip',
   },
@@ -152,7 +152,7 @@ const Projects = () => {
             </div>
 
             <div className="col-12 col-lg-6 project-content">
-              <h4 className="project-period">{project.period}</h4>
+              {project.period && <h4 className="project-period">{project.period}</h4>}
               <h3 className="project-title">{project.title}</h3>
               <h5 className="project-role">{project.role}</h5>
               <p className="project-description">{project.description}</p>

@@ -9,7 +9,7 @@
 
 .projects-section .pagetitle {
   text-align: center;
-  font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--font-display);
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;

@@ -3,188 +3,197 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  padding: 80px 20px;
 }
 
-.pagetitle {
-  text-align: center;
-  font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* ---------- Section heading ---------- */
+/* Scoped to this section so the rules cannot leak into other components. */
+.experience-heading {
+  margin-bottom: 56px;
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   will-change: opacity, transform;
 }
 
-.pagetitle.animate-fade-up {
+.experience-heading.animate-fade-up {
   opacity: 1;
   transform: translateY(0);
 }
 
-.pagetitle h2 {
-  font-size: 3rem; /* Default size for extra small devices */
+.experience-heading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
 }
 
-.experience-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: auto;
+/* ---------- Timeline ---------- */
+.role-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.role {
+  position: relative;
+  padding-left: 34px;
+  padding-bottom: 56px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   will-change: opacity, transform;
 }
 
-.experience-row.animate-fade-up {
+.role.animate-fade-up {
   opacity: 1;
   transform: translateY(0);
 }
 
-.experience-col {
-  padding: 10px 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
+.role:last-child {
+  padding-bottom: 0;
 }
 
-.experience-col.animate-fade-up {
-  opacity: 1;
-  transform: translateY(0);
+/* The connecting rule, drawn per item so it stops at the last marker. */
+.role::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--color-rule);
 }
 
-.experience-col h4, 
-.experience-col h3, 
-.experience-col h5, 
-.experience-col p {
-  margin: 5px 0;
+.role:last-child::before {
+  display: none;
 }
 
-.experience-col h4 {
-  color: #555;
+.role-marker {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid var(--color-body);
+  background-color: var(--color-bg);
 }
 
-.experience-col h3 {
-  font-weight: bold;
+.role:first-child .role-marker {
+  background-color: var(--color-body);
 }
 
-.experience-col h5 {
-  color: #555;
+.role-period {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 6px;
 }
 
-.experience-col p {
-  color: #5d4125;
+.role-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 9px;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--color-body);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.date-col h4 {
-  margin-right: 10px;
-  font-weight: bold;
-  color: #333;
+.role-company {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
 }
 
-/* Small screens (min-width: 756px - max-width: 990px) */
-@media (min-width: 756px) and (max-width: 990px) {
-  .pagetitle {
-    margin-bottom: 0; /* Remove bottom margin */
-  }
-
-  .pagetitle h2 {
-    font-size: 4.2rem; /* Increased slightly */
-  }
-
-  .experience-col h4 {
-    font-size: 1.4rem;
-  }
-
-  .experience-col h3 {
-    font-size: 2.1rem;
-  }
-
-  .experience-col h5 {
-    font-size: 1.1rem;
-  }
-
-  .experience-col p {
-    font-size: 1.2rem;
-  }
-
-  .date-col h4 {
-    font-size: 1.7rem;
-  }
-
-  .experience-col {
-    padding: 15px 10px;
-    text-align: center;
-  }
+.role-title {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-style: italic;
+  color: var(--color-muted);
+  margin: 4px 0 18px;
 }
 
-/* Medium screens (768px - 1200px) */
-@media (min-width: 768px) and (max-width: 1200px) {
-  .pagetitle {
-    margin-bottom: 0; /* Remove bottom margin */
+.role-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 68ch;
+}
+
+/* On wide screens split each role into a meta column and a detail column, so the
+   section uses the full measure like the Education and Skills sections do. */
+@media (min-width: 992px) {
+  .role-body {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: 48px;
+    align-items: start;
   }
 
-  .pagetitle h2 {
-    font-size: 4.8rem; /* Increased slightly */
+  .role-title {
+    margin-bottom: 0;
   }
 
-  .experience-col h4 {
-    font-size: 1.5rem;
-  }
-
-  .experience-col h3 {
-    font-size: 2.2rem;
-  }
-
-  .experience-col h5 {
-    font-size: 1.2rem;
-  }
-
-  .experience-col p {
-    font-size: 1.3rem;
-  }
-
-  .date-col h4 {
-    font-size: 1.7rem;
-  }
-
-  .experience-row {
-    margin: 15px;
+  .role-points {
+    max-width: none;
   }
 }
 
-/* Large screens (1200px and above) */
-@media (min-width: 1200px) {
-  .pagetitle {
-    margin-bottom: 0; /* Remove bottom margin */
+.role-points li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  line-height: 1.62;
+  color: var(--color-body);
+}
+
+.role-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background-color: var(--color-body);
+  opacity: 0.55;
+}
+
+.role-points li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .experience-section {
+    padding: 60px 4px;
   }
 
-  .pagetitle h2 {
-    font-size: 6rem; /* Increased slightly */
+  .experience-heading {
+    margin-bottom: 40px;
   }
 
-  .experience-col h4 {
-    font-size: 1.9rem;
+  .role {
+    padding-bottom: 42px;
   }
+}
 
-  .experience-col h3 {
-    font-size: 2.6rem;
-  }
-
-  .experience-col h5 {
-    font-size: 1.4rem;
-  }
-
-  .experience-col p {
-    font-size: 1.5rem;
-  }
-
-  .date-col h4 {
-    font-size: 2.1rem;
-  }
-
-  .experience-row {
-    margin: 20px;
+@media (prefers-reduced-motion: reduce) {
+  .experience-heading,
+  .role {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }
