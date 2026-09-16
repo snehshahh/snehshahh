@@ -94,7 +94,9 @@
 }
 
 /* Default Styles for Larger Screens */
-.col-lg-6 {
+/* Scoped to the reviews section: an unscoped .col-lg-6 rule leaks into every
+   other component that uses Bootstrap's grid. */
+.reviews-container .col-lg-6 {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
@@ -106,7 +108,7 @@
 
 /* Media Query for Screens Smaller than 768px */
 @media screen and (max-width: 768px) {
-  .col-lg-6 {
+  .reviews-container .col-lg-6 {
     flex-direction: column;
     align-items: center;
     text-align: center;
