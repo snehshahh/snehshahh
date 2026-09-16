@@ -1,6 +1,6 @@
 {
-  "short_name": "Sneh's Portfolio",
-  "name": "Sneh's latest work on web and much more!",
+  "short_name": "Sneh Shah",
+  "name": "Sneh Shah — Full Stack Dev",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#f0e6ce",
+  "background_color": "#f0e6ce"
 }
