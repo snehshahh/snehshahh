@@ -19,7 +19,7 @@ const PROJECTS = [
       { value: '250+', label: 'Players in week one' },
       { value: '1,000+', label: 'Rooms created' },
     ],
-    link: 'https://crisscross-arena.vercel.app',
+    link: 'https://crisscross-ashen.vercel.app',
     linkLabel: 'Play Crisscross',
     detail: {
       tagline: 'Twelve two-player games and a video call, behind one room code.',
@@ -61,7 +61,7 @@ const PROJECTS = [
         'Built the WebRTC calling layer, including the STUN/TURN configuration needed for calls between two ordinary home or mobile networks.',
         'Wrote each of the twelve two-player games against a shared interface so a room can switch games without tearing down the call.',
       ],
-      links: [{ label: 'Live site', href: 'https://crisscross-arena.vercel.app' }],
+      links: [{ label: 'Live site', href: 'https://crisscross-ashen.vercel.app' }],
     },
   },
 
