@@ -1,4 +1,5 @@
 import React from 'react';
+import heroPhoto from '../images/sneh-hero.jpg';
 import './Profile.css';
 
 const GithubIcon = () => (
@@ -24,11 +25,19 @@ const LinkedInIcon = () => (
 const ProfileCard = () => {
   return (
     <div className="profile-container">
-      <div className="background-image"></div>
+      {/* Bundled rather than hotlinked: the previous background pointed at a
+          third-party playground asset host and stopped resolving. */}
+      <img
+        className="profile-photo"
+        src={heroPhoto}
+        alt="Sneh Shah outdoors on a tree-lined trail under an overcast sky."
+      />
+      <div className="profile-scrim" aria-hidden="true" />
+
       <div className="profile-content">
-        <div className="content text-center">
-          <h1 className="NameSneh text-black">SNEH<br />SHAH</h1>
-          <p className="title">FULL STACK DEVELOPER</p>
+        <div className="content">
+          <h1 className="NameSneh">SNEH<br />SHAH</h1>
+          <p className="title">Full Stack Developer</p>
           <div className="social-links">
             <a href="https://github.com/snehshahh" className="social-icon-profile bg-black text-white" target="_blank" rel="noopener noreferrer">
               <GithubIcon />

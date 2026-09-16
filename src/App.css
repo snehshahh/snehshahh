@@ -29,7 +29,7 @@
 .nav-link {
   background: none;
   border: none;
-  color: #666 !important;
+  color: var(--color-body) !important;
   font-weight: 500;
   transition: color 0.3s ease;
   padding: 0.5rem 0 !important;
@@ -38,11 +38,11 @@
 }
 
 .nav-link:hover {
-  color: #333 !important;
+  color: var(--color-ink) !important;
 }
 
 .nav-link.active {
-  color: #000 !important;
+  color: var(--color-ink) !important;
   font-weight: 600;
 }
 
