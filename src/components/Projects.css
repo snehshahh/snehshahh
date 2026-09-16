@@ -1,0 +1,292 @@
+/* Projects.css */
+.projects-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.projects-section .pagetitle {
+  text-align: center;
+  font-family: 'Suravaram', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.projects-section .pagetitle.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-section .pagetitle h2 {
+  font-size: 3rem;
+}
+
+.projects-list {
+  margin-top: 40px;
+}
+
+.project-card {
+  margin-bottom: 70px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.project-card.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Alternate the media/content sides on wide screens */
+@media (min-width: 992px) {
+  .project-card:nth-child(even) .project-media-col {
+    order: 2;
+  }
+
+  .project-card:nth-child(even) .project-content {
+    order: 1;
+  }
+}
+
+/* ---------- Media ---------- */
+.project-media {
+  position: relative;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e5d7b8;
+  box-shadow: 0 10px 30px rgba(93, 65, 37, 0.18);
+  aspect-ratio: 16 / 10;
+}
+
+.project-gif {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in, transform 0.4s ease-out;
+}
+
+.project-gif.is-loaded {
+  opacity: 1;
+}
+
+.project-media:hover .project-gif.is-loaded {
+  transform: scale(1.02);
+}
+
+.project-media-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #e5d7b8 25%, #efe3c6 50%, #e5d7b8 75%);
+  background-size: 200% 100%;
+  animation: project-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes project-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.project-media-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(93, 65, 37, 0.35);
+  box-shadow: none;
+}
+
+.project-media-empty-label {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a6c4a;
+}
+
+.project-media-note {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: #f0e6ce;
+  background-color: rgba(93, 65, 37, 0.82);
+}
+
+/* ---------- Content ---------- */
+.project-content {
+  padding: 24px 20px;
+}
+
+.project-content h4,
+.project-content h3,
+.project-content h5,
+.project-content p {
+  margin: 5px 0;
+}
+
+.project-period {
+  color: #555;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-role {
+  color: #555;
+}
+
+.project-description {
+  color: #5d4125;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.project-tag {
+  padding: 5px 12px;
+  border: 1px solid rgba(93, 65, 37, 0.3);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #5d4125;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #5d4125;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(93, 65, 37, 0.4);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover,
+.project-link:focus {
+  color: #3d2a17;
+  border-color: #3d2a17;
+}
+
+/* ---------- Responsive typography, mirroring Experience.css ---------- */
+@media (max-width: 767px) {
+  .project-media-col {
+    margin-bottom: 8px;
+  }
+
+  .project-content {
+    padding: 16px 4px;
+    text-align: center;
+  }
+
+  .project-tags {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 756px) and (max-width: 990px) {
+  .projects-section .pagetitle h2 {
+    font-size: 4.2rem;
+  }
+
+  .project-period {
+    font-size: 1.4rem;
+  }
+
+  .project-title {
+    font-size: 2.1rem;
+  }
+
+  .project-role {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .projects-section .pagetitle h2 {
+    font-size: 4.8rem;
+  }
+
+  .project-period {
+    font-size: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .project-role {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-section .pagetitle h2 {
+    font-size: 6rem;
+  }
+
+  .project-period {
+    font-size: 1.9rem;
+  }
+
+  .project-title {
+    font-size: 2.6rem;
+  }
+
+  .project-role {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
+}
+
+/* Respect reduced-motion preferences for the section's own animation */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .projects-section .pagetitle {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-media-skeleton {
+    animation: none;
+  }
+
+  .project-media:hover .project-gif.is-loaded {
+    transform: none;
+  }
+}

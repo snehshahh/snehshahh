@@ -6,6 +6,7 @@ import About from './components/About.js';
 import ProfileCard from './components/ProfileCard.js';
 import Skills from './components/Skills.js';
 import Experience from './components/Experince.js';
+import Projects from './components/Projects.js';
 import Reviews from './components/Reviews';
 import ConnectWithMe from './components/ConnectWithMe';
 import Education from './components/Education';
@@ -83,6 +84,11 @@ const App = () => {
                 </button>
               </li>
               <li className="nav-item">
+                <button onClick={() => scrollToSection('projects')} className="nav-link">
+                  Projects
+                </button>
+              </li>
+              <li className="nav-item">
                 <button onClick={() => scrollToSection('education')} className="nav-link">
                   Education
                 </button>
@@ -117,6 +123,10 @@ const App = () => {
         
         <section id="experience" className="min-vh-100">
           <Experience />
+        </section>
+        
+        <section id="projects" className="min-vh-100">
+          <Projects />
         </section>
         
         <section id="education" className="min-vh-100">
