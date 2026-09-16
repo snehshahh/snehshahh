@@ -26,7 +26,7 @@ const PROJECTS = [
     description:
       'A bulk ads manager that launches and edits campaigns across several ad accounts in one pass instead of one ad at a time. I worked on the platform integrations — OAuth onboarding for connected ad accounts, mapping a single bulk request onto the TikTok Marketing API and the Meta Marketing API, and batching writes so a large run stays inside each platform rate limit and reports per-ad status rather than failing as one opaque blob.',
     tags: ['TikTok Marketing API', 'Meta Marketing API', 'OAuth 2.0', 'Node.js', 'Bulk Operations'],
-    link: 'https://blip.com',
+    link: 'https://withblip.com',
     linkLabel: 'Visit Blip',
   },
   {
