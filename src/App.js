@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -11,26 +12,19 @@ import Reviews from './components/Reviews';
 import ConnectWithMe from './components/ConnectWithMe';
 import Education from './components/Education';
 import Loader from './components/Loader.js';
+import ProjectDetail from './components/ProjectDetail.js';
 
-const App = () => {
-  const [loading, setLoading] = useState(true);
+const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (sectionId) => {
@@ -40,14 +34,6 @@ const App = () => {
       setIsNavOpen(false);
     }
   };
-
-  if (loading) {
-    return (
-      <div className="loader">
-        <Loader/>
-      </div>
-    );
-  }
 
   return (
     <div className="app">
@@ -142,6 +128,36 @@ const App = () => {
         </section>
       </main>
     </div>
+  );
+};
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loader">
+        <Loader />
+      </div>
+    );
+  }
+
+  return (
+    // HashRouter keeps deep links to /#/projects/<slug> working on any static
+    // host without a server rewrite rule. Swap to BrowserRouter if the host is
+    // configured to fall back to index.html.
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </HashRouter>
   );
 };
 

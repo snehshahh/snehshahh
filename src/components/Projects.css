@@ -205,14 +205,27 @@
   background-color: rgba(255, 255, 255, 0.35);
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 26px;
+  margin-top: 18px;
+}
+
 .project-link {
   display: inline-block;
-  margin-top: 18px;
   font-weight: 600;
   color: #5d4125;
   text-decoration: none;
   border-bottom: 1px solid rgba(93, 65, 37, 0.4);
   transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link-external {
+  font-weight: 500;
+  color: var(--color-muted);
+  border-bottom-color: rgba(93, 65, 37, 0.25);
 }
 
 .project-link:hover,
@@ -233,6 +246,10 @@
   }
 
   .project-tags {
+    justify-content: center;
+  }
+
+  .project-actions {
     justify-content: center;
   }
 }

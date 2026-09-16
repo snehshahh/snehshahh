@@ -1,65 +1,9 @@
 // Projects.js
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import PROJECTS from '../data/projects';
 import './Projects.css';
 
-const PROJECTS = [
-  {
-    id: 'crisscross',
-    title: 'Crisscross',
-    role: 'Personal Product · Design & Build',
-    period: '2026',
-    gif: 'crisscross.gif',
-    alt: 'Screen recording of the Crisscross landing page: cycling through the player avatars, typing a codename, and flipping the site into dark mode.',
-    description:
-      'Twelve two-player games behind one room code, with a video call built into the same tab so people who are apart can play and talk without juggling apps. No signup and no download — one player starts a room, the other joins with the code. Room and game state sync live through Firebase, and the call connects the two browsers directly over WebRTC with a TURN relay for the networks that cannot be reached any other way.',
-    tags: ['Next.js', 'React', 'TypeScript', 'Firebase', 'WebRTC', 'Tailwind CSS'],
-    metrics: [
-      { value: '250+', label: 'Players in week one' },
-      { value: '1,000+', label: 'Rooms created' },
-    ],
-    link: 'https://crisscross-arena.vercel.app',
-    linkLabel: 'Play Crisscross',
-  },
-  {
-    id: 'hiking-alert',
-    title: 'Hiking Alert Platform',
-    role: 'Freelance · Full Stack Developer',
-    period: 'Since 2023',
-    gif: 'hiking-alert.gif',
-    alt: 'Screen recording of the Hiking Alert platform: a trekker sets an expected return time and emergency contacts are notified over WhatsApp if the check-in never arrives.',
-    description:
-      "A safety net for trekkers. A hiker registers a trip with an expected return time; if they don't check in before it lapses, the platform automatically escalates to their emergency contacts over WhatsApp. I built the React front end, the Firebase data layer, and the Node.js webhook that parses replies and resolves alerts in two-way conversations.",
-    tags: ['React', 'Firebase', 'Node.js', 'Meta WhatsApp Cloud API', 'Webhooks'],
-    link: 'https://manav.in/blog/launching-alerts',
-    linkLabel: 'Read the launch post',
-  },
-  {
-    id: 'blip',
-    title: 'Blip — TikTok Ads Integration',
-    role: 'Client Engagement · via BMV System Integration',
-    period: '',
-    gif: 'blip.gif',
-    alt: "Screen recording of Blip's bulk ad launcher: authorizing a TikTok ad account, then watching per-ad launch progress stream in live.",
-    description:
-      "Built the end-to-end TikTok Ads integration for Blip's bulk ad-launching product — the OAuth 2.0 login flow, account authorization, and the backend and frontend connectivity to the TikTok Ads API. Launch jobs keep their state in Redis and stream progress to the browser over Server-Sent Events, so a bulk run reports live per-ad status instead of being polled for it.",
-    tags: ['React.js', 'Node.js', 'Redis', 'Server-Sent Events', 'OAuth 2.0', 'TikTok Ads API'],
-    link: 'https://withblip.com',
-    linkLabel: 'Visit Blip',
-  },
-  {
-    id: 'linkers-db',
-    title: "Linker's DB",
-    role: 'Personal Project',
-    period: '2024',
-    gif: 'linkers-db.gif',
-    alt: "Screen recording of Linker's DB: saving and organising links from the web app and the companion Chrome extension.",
-    description:
-      'A dedicated URL management platform — save, tag and retrieve links from a React web app or straight from the browser through a companion Chrome extension, with everything kept in sync behind one account.',
-    tags: ['React', 'Chrome Extension', 'Firebase'],
-    link: '',
-    linkLabel: '',
-  },
-];
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
@@ -193,16 +137,23 @@ const Projects = () => {
                 ))}
               </ul>
 
-              {project.link && (
-                <a
-                  className="project-link"
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.linkLabel || 'View project'} →
-                </a>
-              )}
+              <div className="project-actions">
+                {project.detail && (
+                  <Link className="project-link" to={`/projects/${project.slug}`}>
+                    Read the case study →
+                  </Link>
+                )}
+                {project.link && (
+                  <a
+                    className="project-link project-link-external"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.linkLabel || 'View project'} →
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
