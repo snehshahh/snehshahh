@@ -14,12 +14,27 @@
 
 .navbar {
   background-color: transparent;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
   padding: 1rem 0;
+  border-bottom: 1px solid transparent;
 }
 
+/* Once scrolled the bar gets its own surface. The sections underneath run from
+   cream to brown to near-black, and a transparent bar left the links sitting
+   dark-on-dark over the Connect section. */
 .navbar-scrolled {
-  background-color: transparent;
+  background-color: rgba(240, 230, 206, 0.82);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  backdrop-filter: blur(12px) saturate(1.4);
+  border-bottom-color: var(--color-rule);
+  padding: 0.6rem 0;
+}
+
+/* Without backdrop-filter the bar has to be opaque to stay legible. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .navbar-scrolled {
+    background-color: rgba(240, 230, 206, 0.97);
+  }
 }
 
 .navbar-nav {
